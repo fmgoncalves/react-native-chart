@@ -94,8 +94,8 @@ export default class Chart extends Component<void, any, any> {
 			});
 		});
 
-		let ceilMax = Math.ceil(max);
-		let floorMin = Math.floor(min);
+		let ceilMax = Math.ceil(max/10)*10;
+		let floorMin = Math.floor(min/10)*10;
 
 		if ((ceilMax - floorMin) > this.props.verticalGridStep) {
 			min = floorMin;
